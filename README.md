@@ -1,15 +1,15 @@
 # 🔍 mf4_visualizer
 
 A simple Python tool for visualizing signals in `.mf4` log files.  
-Focused on EV battery test data through grouped signal plotting and export.
+Focused on EV battery test data through signal filtering and exportable plots.
 
 ---
 
 ## ✨ Features
 
 📂 Auto-loads the latest `.mf4` file  
-🔎 Grouped signal filtering using `KEYWORD_MAP`  
-📈 Plots signals with time axis per group  
+🔎 Signal filtering using `KEYWORD_MAP`  
+📈 Plots signals with time axis 
 🖼 Exports individual plots as `.png`  
 📄 Combines all plots into a single `.pdf`  
 🚫 `.gitignore` excludes log files and exports
@@ -40,7 +40,7 @@ python mf4_visualizer.py
 
 ## 🗂 Version History
 
-**v1.0.0** – Initial version with grouped plotting and export
+**v1.0.0** – Initial version with plotting and export
 
 ---
 
