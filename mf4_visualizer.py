@@ -84,11 +84,11 @@ def extract_signals(mdf):
                 except Exception as e:
                     print(f"⚠️ Could not extract {key}: {e}")
             if signal_data[key]:
-                export_group_plot(signal_data[key], key, pdf)
+                export_plot(signal_data[key], key, pdf)
     return pdf_path
 
 # === Export Plot ===
-def export_group_plot(signals, key, pdf):
+def export_plot(signals, key, pdf):
     plt.figure(figsize=(10, 4))
     for sig in signals:
         plt.plot(sig["timestamps"], sig["samples"], label=sig["name"])
