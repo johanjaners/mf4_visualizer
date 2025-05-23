@@ -9,7 +9,7 @@ Focused on EV battery test data through signal filtering and visualization.
 Features:
 - Auto-loads latest `.mf4` file
 - Filters signals by keyword
-- Plots grouped signals over time
+- Plots signals over time
 
 Usage:
     - Place .mf4 logs in `mf4_logfiles/`
@@ -32,7 +32,7 @@ INPUT_DIR = "./mf4_logfiles"
 EXPORT_DIR = "./mf4_exports"
 os.makedirs(EXPORT_DIR, exist_ok=True)
 
-# === GROUPED SIGNAL MAPPING ===
+# === SIGNAL MAPPING ===
 KEYWORD_MAP = {
     "cell voltage": ["CellVMax", "CellVMin"],
     "cell temperature": ["TempAvg", "TempMax", "TempMin"],
@@ -87,7 +87,7 @@ def extract_signals(mdf):
                 export_group_plot(signal_data[key], key, pdf)
     return pdf_path
 
-# === Export Group Plot ===
+# === Export Plot ===
 def export_group_plot(signals, key, pdf):
     plt.figure(figsize=(10, 4))
     for sig in signals:
